@@ -30,10 +30,23 @@ struct ContentView: View {
         }
     }
 }
-                
-            
+        
 
 
+struct ContentViewTwo: View {
+    var body: some View{
+        VStack{
+            Rectangle()
+            HStack{
+                Rectangle()
+                Rectangle()
+                Rectangle()
+            }
+            .containerRelativeFrame(.vertical, count: 3, spacing: 0)
+        }
+    }
+}
 #Preview {
     ContentView()
+    
 }
