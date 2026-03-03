@@ -10,13 +10,13 @@ import SwiftUI
 struct Day2: View {
     var body: some View {
         
-        Rectangle()
-            .frame(width: 400,height: 200)
-        
-        
         NavigationStack {
             VStack {
+                
+                Rectangle()
+                    .frame(width: 400,height: 200)
                 Spacer()
+                
                 
                 Text("2022TeslaModelX")
                     .font(.title)
@@ -25,43 +25,45 @@ struct Day2: View {
             }
             Spacer()
             
-            VStack {
-                
-                Text("Specifications")
-                Text("Year 2022")
-                Text("Make Tesla")
-                Text("Model Model X")
-                Text("Colourn Sliver")
-                Text("Drivetrain All-wheel drive")
-                Text("Listed On May22,2024")
-                 
-                Spacer()
-                
-                Text("Description")
-                Text("Stunning Tesla Model X in immaculate condition with 22,000 kilometers of careful driving. THis family-friendly SUV features the iconic falcon wing doors that operate flawlessly, 7-seat configuration with premium white interior, and panoran...")
-                
-               
+            VStack (alignment: .leading, spacing: 10){
                     
-    
-
+                    Text("Specifications")
+                    Text("Year           2022")
+                    Text("Make           Tesla")
+                    Text("Model          Model X")
+                    Text("Colourn        Sliver")
+                    Text("Drivetrain     All-wheel drive")
+                    Text("Listed On      May22,2024")
+                     
+                    Spacer()
+                    
+                    Text("Description")
+                    Text("Stunning Tesla Model X in immaculate condition with 22,000 kilometers of careful driving. THis family-friendly SUV features the iconic falcon wing doors that operate flawlessly, 7-seat configuration with premium white interior, and panoran...")
+                    
+                   
+                    
+                }
+                .toolbar {
+                    ToolbarItem (placement: .topBarLeading) {
+                        Button {
+                        } label: {
+                            Text("\(Image(systemName: "chevron.backward"))Back")
                 
-            }
-            .toolbar {
-                ToolbarItem (placement: .topBarLeading) {
-                    Button {
-                    } label: {
-                        Text("\(Image(systemName: "chevron.backward"))Back")
-                        
+                            
+                        }
                     }
                 }
-            }
+            
         }
+        
+        
     }
 }
 
 
-    
-    
-    #Preview {
-        Day2()
-    }
+
+
+
+#Preview {
+    Day2()
+}
