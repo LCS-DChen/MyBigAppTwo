@@ -9,10 +9,59 @@ import SwiftUI
 
 struct Day2: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        Rectangle()
+            .frame(width: 400,height: 200)
+        
+        
+        NavigationStack {
+            VStack {
+                Spacer()
+                
+                Text("2022TeslaModelX")
+                    .font(.title)
+                Text("$95,000.00")
+                
+            }
+            Spacer()
+            
+            VStack {
+                
+                Text("Specifications")
+                Text("Year 2022")
+                Text("Make Tesla")
+                Text("Model Model X")
+                Text("Colourn Sliver")
+                Text("Drivetrain All-wheel drive")
+                Text("Listed On May22,2024")
+                 
+                Spacer()
+                
+                Text("Description")
+                Text("Stunning Tesla Model X in immaculate condition with 22,000 kilometers of careful driving. THis family-friendly SUV features the iconic falcon wing doors that operate flawlessly, 7-seat configuration with premium white interior, and panoran...")
+                
+               
+                    
+    
+
+                
+            }
+            .toolbar {
+                ToolbarItem (placement: .topBarLeading) {
+                    Button {
+                    } label: {
+                        Text("\(Image(systemName: "chevron.backward"))Back")
+                        
+                    }
+                }
+            }
+        }
     }
 }
 
-#Preview {
-    Day2()
-}
+
+    
+    
+    #Preview {
+        Day2()
+    }
