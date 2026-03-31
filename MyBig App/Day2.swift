@@ -9,60 +9,54 @@ import SwiftUI
 
 struct Day2: View {
     var body: some View {
-        
         NavigationStack {
-            VStack {
+            ScrollView {
+                VStack(alignment: .leading) {
                 
-                Rectangle()
-                    .frame(width: 400,height: 200)
-                Spacer()
-                
-                
-                Text("2022TeslaModelX")
-                    .font(.title)
-                Text("$95,000.00")
-                
-            }
-            Spacer()
-            
-            VStack (alignment: .leading, spacing: 10){
+                                Image("car")
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(height: 250)
+                                    .clipped()
                     
-                    Text("Specifications")
-                    Text("Year           2022")
-                    Text("Make           Tesla")
-                    Text("Model          Model X")
-                    Text("Colourn        Sliver")
-                    Text("Drivetrain     All-wheel drive")
-                    Text("Listed On      May22,2024")
-                     
-                    Spacer()
-                    
-                    Text("Description")
-                    Text("Stunning Tesla Model X in immaculate condition with 22,000 kilometers of careful driving. THis family-friendly SUV features the iconic falcon wing doors that operate flawlessly, 7-seat configuration with premium white interior, and panoran...")
-                    
-                   
-                    
-                }
-                .toolbar {
-                    ToolbarItem (placement: .topBarLeading) {
-                        Button {
-                        } label: {
-                            Text("\(Image(systemName: "chevron.backward"))Back")
-                
-                            
-                        }
+                    VStack(alignment: .center) {
+                        Text("2022 Tesla Model X")
+                            .font(.title)
+                            .bold()
+                        Text("$95,000.00")
+                            .font(.headline)
+                            .foregroundColor(.secondary)
                     }
+                    .frame(maxWidth: .infinity)
+                    
+                  
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Specifications").font(.headline)
+                        Text("Year: 2022")
+                        Text("Make: Tesla")
+                        Text("Model: Model X")
+                        Text("Colour: Silver")
+                        
+                        Divider()
+                        
+                        Text("Description")
+                            .font(.headline)
+                        
+                        
+                        Text("Stunning Tesla Model X in immaculate condition with 22,000 kilometers of careful driving. This family-friendly SUV features the iconic falcon wing doors that operate flawlessly, 7-seat configuration with premium white interior, and panoramic roof. ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... ")
+                            .lineLimit(nil) 
+                    }
+                    .padding(.horizontal)
                 }
-            
+            }
+            .toolbar {
+                ToolbarItem(placement: .topBarLeading) {
+                    Button("Back") { }
+                }
+            }
         }
-        
-        
     }
 }
-
-
-
-
 
 #Preview {
     Day2()
