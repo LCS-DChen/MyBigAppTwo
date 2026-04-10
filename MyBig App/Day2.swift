@@ -33,26 +33,13 @@ struct Car: View {
                     
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Specifications").font(.headline)
-                        HStack {
-                            Text("Year")
-                            Spacer()
-                            Text("2022")
-                        }
-                        HStack {
-                            Text("Make")
-                            Spacer()
-                            Text("Tesla")
-                        }
-                        HStack {
-                            Text("Model")
-                            Spacer()
-                            Text("Model X")
-                        }
-                        HStack {
-                            Text("Colour")
-                            Spacer()
-                            Text("Silver")
-                        }
+                        
+                        LabelView(label: "Year", value: "2022")
+                        LabelView(label: "Make", value: "Tesla")
+                        LabelView(label: "Model", value: "Model X")
+                        LabelView(label: "Colour", value: "Silver")
+
+                
                        
                         Divider()
                         
@@ -81,3 +68,18 @@ struct Car: View {
 
 }
 
+struct LabelView: View {
+    
+    var label: String
+    var value: String
+    
+    var body: some View {
+        
+        HStack {
+            Text(label)
+            Spacer()
+            Text(value)
+        }
+
+    }
+}
