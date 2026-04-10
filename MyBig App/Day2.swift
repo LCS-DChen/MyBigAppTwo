@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct Day2: View {
+struct Car: View {
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading) {
-                
-                                Image("car")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(height: 250)
-                                    .clipped()
+                    
+                    Image("car")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(height: 250)
+                        .clipped()
                     
                     VStack(alignment: .center) {
                         Text("2022 Tesla Model X")
@@ -29,14 +30,30 @@ struct Day2: View {
                     }
                     .frame(maxWidth: .infinity)
                     
-                  
+                    
                     VStack(alignment: .leading, spacing: 12) {
                         Text("Specifications").font(.headline)
-                        Text("Year: 2022")
-                        Text("Make: Tesla")
-                        Text("Model: Model X")
-                        Text("Colour: Silver")
-                        
+                        HStack {
+                            Text("Year")
+                            Spacer()
+                            Text("2022")
+                        }
+                        HStack {
+                            Text("Make")
+                            Spacer()
+                            Text("Tesla")
+                        }
+                        HStack {
+                            Text("Model")
+                            Spacer()
+                            Text("Model X")
+                        }
+                        HStack {
+                            Text("Colour")
+                            Spacer()
+                            Text("Silver")
+                        }
+                       
                         Divider()
                         
                         Text("Description")
@@ -44,7 +61,7 @@ struct Day2: View {
                         
                         
                         Text("Stunning Tesla Model X in immaculate condition with 22,000 kilometers of careful driving. This family-friendly SUV features the iconic falcon wing doors that operate flawlessly, 7-seat configuration with premium white interior, and panoramic roof. ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... ")
-                            .lineLimit(nil) 
+                            .lineLimit(nil)
                     }
                     .padding(.horizontal)
                 }
@@ -56,8 +73,11 @@ struct Day2: View {
             }
         }
     }
+    
 }
 
 #Preview {
-    Day2()
+    Car ()
+
 }
+
